@@ -864,10 +864,20 @@ button:hover {
     }
 }
 
-/* Responsivo para pantallas pequeñas */
+/* Responsivo para pantallas pequeñas - dos columnas */
 @media (max-width: 480px) {
     .streaming-text h1 {
         font-size: 2rem;
+    }
+
+    .streaming-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .card-streaming {
+        width: 100%; /* Ajusta el ancho al 100% de la columna */
     }
 
     .price {
@@ -882,6 +892,7 @@ button:hover {
         font-size: 0.9rem;
     }
 }
+
 
 /*whatsApp Botón*/
 .whatsapp-button {
