@@ -1,0 +1,910 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*estilos para el section*/
+.inicio {
+    width: 100%;
+    height: 75vh; /* Toma la altura completa de la ventana */
+    display: flex;
+    justify-content: center;
+    margin-bottom: -120px;
+}
+
+/*Estilos para la el contendor de la imagen*/
+.container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), 
+                linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+                url('../RESOURSES/INICIO.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center; /* Centra el texto */
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+button {
+    display: block;
+    margin: 20px auto; 
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer; 
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e34545;
+}
+
+/* Estilos para la sección de tarjetas sección publicidad*/
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: black; /* Color de fondo */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    width: 23%; /* Ajustar el tamaño a un 23% para que quepan 4 tarjetas en fila */
+    text-align: center;
+    position: relative; /* Para posicionar la cinta en la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    transform: perspective(1000px) scale(1); /* Perspectiva inicial */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.card p {
+    font-size: 1rem;
+    color: gray;
+    margin: 10px 0;
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background-color: #e34545;
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: perspective(1000px) scale(1.1); /* Escalar la tarjeta un poco más grande al pasar el cursor */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Agregar más sombra para que se vea elevada */
+}
+
+/* Cinta verde en la esquina */
+.card::before {
+    content: "Popular";
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    background-color: rgb(25, 185, 25);
+    color: white;
+    font-weight: bold;
+    padding: 5px 40px;
+    transform: rotate(-45deg); /* Rotar la cinta */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 0.9rem;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* En pantallas medianas, las tarjetas ocuparán el 45% del ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* En pantallas pequeñas, las tarjetas ocuparán el 100% del ancho */
+    }
+}
+
+/*estilos para la seccion de informacion de las cuentas o garantias*/
+
+/* Sección principal */
+.premium-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212;
+}
+
+.description {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.8)), url('path/to/background-image.jpg') no-repeat center center/cover;
+    border-radius: 15px;
+}
+
+.description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilos para las tarjetas de beneficios */
+/* Estilos para la sección de cuentas premium */
+.premium-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #121212;
+    overflow: hidden;
+}
+
+/* Contenedor de descripción con imagen de fondo y gradiente */
+.premium-section .description {
+    display: flex;
+    width: 100%;
+    max-width: 920px;
+    background: 
+        linear-gradient(rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.8)),
+        url('../RESOURSES/INICIO.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 40px;
+    color: white;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de la imagen de las palomitas */
+.premium-section .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.premium-section .image-container .popcorn-image {
+    width: 200px;
+    height: 200px;
+    background: url('../RESOURSES/crispetas.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Contenedor de texto */
+.premium-section .text-container {
+    flex: 2;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.premium-section .text-container h2 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Contenedor de beneficios */
+.benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 70%;
+    max-width: 950px;
+    margin-top: -45px;
+    z-index: 2;
+}
+
+/* Estilos para cada beneficio */
+.benefit {
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.benefit h3 {
+    font-size: 1.2rem;
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Efecto hover para cada beneficio */
+.benefit:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar contenedor de descripción para ocupar todo el ancho */
+    .premium-section .description {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .premium-section .image-container,
+    .premium-section .text-container {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* Ajustar la imagen de palomitas */
+    .premium-section .image-container .popcorn-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    /* Configurar la cuadrícula de beneficios en 2 columnas */
+    .benefits-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .benefit {
+        width: 85%;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .benefit img {
+        width: 30px;
+    }
+
+    .benefit h3 {
+        font-size: 1rem;
+    }
+
+    .benefit p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Contenedor de la sección */
+.promo-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #121212;
+    color: white;
+    height: 100vh;
+}
+
+/* Estilo de la tarjeta promocional con letras de desenfoque*/
+/* Contenedor de la sección */
+/* Contenedor de la sección */
+.promo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #121212;
+    color: white;
+    min-height: 100vh;
+    flex-direction: row; /* Para que en desktop esté en fila */
+    gap: 20px;
+}
+
+/* Texto "PROMO ESPECIAL" */
+.promo-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.promo-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+    margin-bottom: 20px;
+}
+
+/* Tarjeta promocional */
+.promo-card {
+    background-color: white;
+    color: black;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Cabecera de la tarjeta con cinta verde */
+.promo-header {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.promo-subtitle {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+
+
+/* Precio */
+.promo-price {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+/* Logos en columna */
+.promo-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.promo-logos img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+/* Botón */
+.promo-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.promo-button:hover {
+    background-color: #e34545;
+}
+
+/* Efecto de texto borroso */
+.promo-text.in-view h1 {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .promo-section {
+        flex-direction: column; /* Cambia a columna en modo móvil */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .promo-text {
+        width: 100%;
+        order: -1; /* Asegura que el texto esté arriba de la tarjeta */
+        margin-bottom: 20px;
+    }
+
+    .promo-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .promo-card {
+        width: 90%; /* Ancho para adaptarse a pantallas pequeñas */
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+
+    /* Ajuste de cinta en modo móvil */
+    .ribbon {
+        top: 10px;
+        left: -15px; /* Alineación más precisa para pantallas pequeñas */
+        font-size: 0.7rem;
+        padding: 5px 15px;
+    }
+}
+/* Estilos para la sección del banner */
+.banner {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    height: 45px;
+    line-height: 8px; /* Alinea el texto verticalmente */
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .banner {
+        font-size: small;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: smaller;
+    }
+}
+/*seccion para tí*/
+/* Estilos para la sección "LO MEJOR PARA TI" */
+.section-best-for-you {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #121212;
+    color: white;
+}
+
+/* Texto de la izquierda con efecto de desenfoque */
+.text-best h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.text-best.in-view h1 {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Contenedor de tarjetas de suscripción */
+.cards-best-for-you {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 40%;
+}
+
+/* Estilos para cada tarjeta */
+.card-best {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 0; /* Elimina el padding para que la imagen ocupe el ancho completo */
+}
+
+/* Estilo de la imagen para que cubra toda la parte superior de la tarjeta */
+.card-best img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Cuerpo de la tarjeta */
+.card-best-body {
+    padding: 20px;
+}
+
+/* Cinta verde en la esquina superior derecha de cada tarjeta */
+.ribbon-best {
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background-color: rgb(25, 185, 25);
+    color: white;
+    font-weight: bold;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+/* Contenedor del precio */
+.price-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Estilo de la moneda */
+.currency {
+    font-size: 1.5rem;
+    font-weight: normal;
+    display: block;
+    line-height: 1;
+}
+
+/* Precio principal */
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Texto del periodo (Mensual) */
+.period {
+    font-size: 1rem;
+    color: gray;
+    margin:10px 0;
+}
+
+/* Estilo de la garantía */
+.guarantee {
+    font-size: 1rem;
+}
+
+.check-icon {
+    font-size: 1rem;
+    color: gray;
+    margin-right: 5px;
+}
+
+/* Botón de la tarjeta */
+.card-best-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card-best-button:hover {
+    background-color: #e34545;
+}
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .cards-best-for-you {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .text-best h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .text-best h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .section-best-for-you {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+/*Promo Netflix*/
+/* Sección de promoción de Netflix */
+.netflix-promo-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                url('../RESOURSES/fondo01.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    color: black;
+    height: 170px;
+    position: relative;
+    gap: 20px;
+}
+
+/* Contenedor de la imagen del logo de Netflix */
+.netflix-logo-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.netflix-logo-container img {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Contenedor del contenido promocional */
+.promo-content {
+    width: 50%;
+    text-align: left;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin: 10px 0;
+}
+
+.description0 {
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Botón de promoción */
+.promo-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.promo-button:hover {
+    background-color: #e34545;
+}
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .netflix-promo-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .netflix-logo-container, .promo-content {
+        width: 100%;
+    }
+
+    .promo-content .price {
+        font-size: 2rem;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .promo-content .price {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .promo-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Sección de "Streaming Total" */
+.streaming-section {
+    background-color: #121212;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Título de la sección con efecto de desenfoque */
+.streaming-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.streaming-text.in-view h1 {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Contenedor de las tarjetas */
+.streaming-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Estilos de cada tarjeta */
+.card-streaming {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de cada tarjeta */
+.card-image {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Información de la tarjeta */
+.card-info {
+    padding: 10px;
+    color: black;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.guarantee {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* Botón de contacto */
+.contact-button {
+    padding: 8px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: #e34545;
+}
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .streaming-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .streaming-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-streaming {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .streaming-text h1 {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .guarantee {
+        font-size: 0.8rem;
+    }
+
+    .contact-button {
+        font-size: 0.9rem;
+    }
+}
+
+/*whatsApp Botón*/
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-button img {
+    width: 35px;
+    height: 35px;
+}
