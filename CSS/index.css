@@ -56,7 +56,7 @@ button:hover {
     background-color: #e34545;
 }
 
-/* Estilos para la sección de tarjetas sección publicidad*/
+/* Estilos para la sección de tarjetas sección publicidad */
 .cards {
     display: flex;
     justify-content: space-around;
@@ -113,10 +113,12 @@ button:hover {
     background-color: #e34545;
 }
 
-/* Efecto hover */
-.card:hover {
-    transform: perspective(1000px) scale(1.1); /* Escalar la tarjeta un poco más grande al pasar el cursor */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Agregar más sombra para que se vea elevada */
+/* Efecto hover solo en pantallas grandes */
+@media (min-width: 769px) {
+    .card:hover {
+        transform: perspective(1000px) scale(1.1); /* Escalar la tarjeta un poco más grande al pasar el cursor */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Agregar más sombra para que se vea elevada */
+    }
 }
 
 /* Cinta verde en la esquina */
@@ -135,7 +137,7 @@ button:hover {
     font-size: 0.9rem;
 }
 
-/* Media queries para pantallas más pequeñas */
+/* Media queries para pantallas medianas */
 @media (max-width: 768px) {
     .card {
         width: 45%; /* En pantallas medianas, las tarjetas ocuparán el 45% del ancho */
@@ -147,6 +149,7 @@ button:hover {
         width: 100%; /* En pantallas pequeñas, las tarjetas ocuparán el 100% del ancho */
     }
 }
+
 
 /*estilos para la seccion de informacion de las cuentas o garantias*/
 
