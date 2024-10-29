@@ -665,7 +665,7 @@ button:hover {
 /*Promo Netflix*/
 /* Sección de promoción de Netflix */
 .netflix-promo-section {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    background: linear-gradient(rgba(248, 246, 246, 0.8), rgba(236, 118, 118, 0.8)),
                 url('../RESOURSES/fondo01.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -922,3 +922,304 @@ button:hover {
     width: 35px;
     height: 35px;
 }
+
+/* Estilos para seccion spotify */
+/*informativo spotify*/
+
+.spotify-promo-section-spotify {
+    background: linear-gradient(rgba(193, 226, 144, 0.8), rgba(42, 39, 39, 0.8)),
+                url('../RESOURSES/spotify.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    color: black;
+    height: 170px;
+    position: relative;
+    gap: 20px;
+}
+
+
+/* Contenedor de la imagen del logo de spotify */
+.spotify-logo-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify-logo-container img {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Contenedor del contenido promocional */
+.promo-content-spotify {
+    width: 50%;
+    text-align: left;
+}
+
+.price-Spotify {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.description1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Botón de promoción */
+.promo-button-spotify {
+    padding: 10px 20px;
+    color: black;
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.promo-button-potify:hover {
+    background-color: #a3deb5;
+}
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .spotify-promo-section-spotify {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .spotify-logo-container, .promo-content-spotify {
+        width: 100%;
+    }
+
+    .promo-content-spotify .price-spotify {
+        font-size: 2rem;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .promo-content-spotify .price-spotify {
+        font-size: 2rem;
+    }
+
+    .description0 {
+        font-size: 0.9rem;
+    }
+
+    .promo-button-spotify {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .promo-button-spotify:hover {
+        background-color: #a3deb5;
+    }
+}
+
+/* Sección de otros servicios */
+
+/* Sección principal de "Streaming Total" */
+.content-streaming {
+    background-color: #121212;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.content-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.content-title.in-view h1 {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Contenedor de las tarjetas */
+.content-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Estilos de cada tarjeta */
+.stream-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de cada tarjeta */
+.stream-card-image {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stream-card-image img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Información de la tarjeta */
+.stream-card-info {
+    padding: 10px;
+    color: black;
+}
+
+.stream-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.stream-guarantee {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+/* Botón de contacto */
+.stream-contact-button {
+    padding: 8px 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.stream-contact-button:hover {
+    background-color: #e34545;
+}
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .content-title h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stream-card {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+/* Responsivo para pantallas pequeñas - dos columnas */
+@media (max-width: 480px) {
+    .content-title h1 {
+        font-size: 2rem;
+    }
+
+    .content-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stream-card {
+        width: 100%; /* Ajusta el ancho al 100% de la columna */
+    }
+
+    .stream-price {
+        font-size: 1rem;
+    }
+
+    .stream-guarantee {
+        font-size: 0.8rem;
+    }
+
+    .stream-contact-button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para el footer */
+.site-footer {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    color: #e34545;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 10px;
+    }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    
+    .footer-info p {
+        font-size: 0.8rem;
+    }
+}
+
