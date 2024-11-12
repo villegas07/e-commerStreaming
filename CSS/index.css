@@ -389,7 +389,7 @@ button:hover {
     position: relative;
 }
 
-/* Cabecera de la tarjeta con cinta verde */
+/* Cabecera de la tarjeta con cinta */
 .promo-header {
     background-color: red;
     color: white;
@@ -405,24 +405,23 @@ button:hover {
     margin: 0;
 }
 
-
-
 /* Precio */
 .promo-price {
     font-size: 2rem;
     margin: 20px 0;
 }
 
-/* Logos en columna */
+/* Logo más grande y centrado */
 .promo-logos {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 5px 0;
+    justify-content: center;
+    margin: 15px 0;
 }
 
 .promo-logos img {
-    width: 80px;
+    width: 350px; /* Ajusta el tamaño según prefieras */
+    max-width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -450,7 +449,7 @@ button:hover {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .promo-section {
-        flex-direction: column; /* Cambia a columna en modo móvil */
+        flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 20px;
@@ -458,16 +457,16 @@ button:hover {
 
     .promo-text {
         width: 100%;
-        order: -1; /* Asegura que el texto esté arriba de la tarjeta */
+        order: -1;
         margin-bottom: 20px;
     }
 
     .promo-text h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .promo-card {
-        width: 90%; /* Ancho para adaptarse a pantallas pequeñas */
+        width: 90%;
         margin: 0 auto;
         margin-bottom: 100px;
     }
@@ -475,11 +474,12 @@ button:hover {
     /* Ajuste de cinta en modo móvil */
     .ribbon {
         top: 10px;
-        left: -15px; /* Alineación más precisa para pantallas pequeñas */
+        left: -15px;
         font-size: 0.7rem;
         padding: 5px 15px;
     }
 }
+
 /* Estilos para la sección del banner */
 .banner {
     background-color: red;
@@ -812,7 +812,7 @@ button:hover {
 }
 
 .card-image img {
-    max-width: 100px;
+    max-width: 100%;
     height: auto;
 }
 
@@ -960,7 +960,7 @@ button:hover {
 }
 
 .price-Spotify {
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
     margin: 10px 0;
 }
@@ -1002,7 +1002,7 @@ button:hover {
     }
 
     .promo-content-spotify .price-spotify {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 }
 
@@ -1074,11 +1074,13 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Opcional: para asegurarse de que no sobresalga */
 }
 
 .stream-card-image img {
-    max-width: 100px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que llene el contenedor */
 }
 
 /* Información de la tarjeta */
