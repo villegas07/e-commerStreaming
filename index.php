@@ -191,7 +191,7 @@ $otrosServicios = $conexion->query("SELECT * FROM OtrosServicios");
         <img src="<?php echo htmlspecialchars($spotifyPromo['imagen_url']); ?>" alt="Spotify Logo">
     </div>
     <div class="promo-content-spotify">
-        <p class="price-Spotify">COP <?php echo number_format($spotifyPromo['precio'], 2); ?></p>
+        <p class="price-Spotify">$<?php echo number_format($spotifyPromo['precio'], 2); ?></p>
         <p class="description1"><?php echo htmlspecialchars($spotifyPromo['descripcion']); ?></p>
         <button class="promo-button-spotify" 
                 data-nombre="Spotify" 
